@@ -1,0 +1,35 @@
+<form action="">
+    <!--IMPORTANTE: NgModel: hay que definir el atributo name en el html, para identificarlo-->
+    <input type="text" [(ngModel)]="name" placeholder="name" id="name" name="name" readonly>
+    <!--<input *ngIf="!active" type="text" [(ngModel)]="description" placeholder="description" id="description" name="description" readonly>-->
+    
+    <input type="number" [(ngModel)]="price" placeholder="price" id="price" name="price">
+    <label *ngIf="!state">{{description}}</label>
+    <!--Evento click de angular llama a una función en el typescript del componente:-->
+
+    <input type="checkbox" [(ngModel)]="state" name="state">
+    <!--la etiqueta HTML Select permite crear una lista seleccionable: -->
+    <select [(ngModel)]="idtegory" name="idtegory">
+      <option *ngFor="let category of categories; index as i; first as isFirst" value="{{category.name}}">{{category.name}}</option>
+    </select>
+
+    <button type="button" (click)="save()">Save</button>
+</form>
+
+
+<table>
+  <td>ID</td>
+  <td>Name</td>
+  <td>description</td>
+  <td>Precio</td>
+  <tr *ngFor="let product of products; index as i; first as isFirst">
+    <!--COMPONENTE PADRE-->
+    <!--PASAR DE COMPONENTE HIJO A PADRE-->
+    <app-row [name]="product.name" [description]="product.description"></app-row>
+  </tr>
+</table>
+
+<!--ngModel: directiva bidireccional, usada mucho en formularios
+  La interpolación {{}} manda del código typescript al html, el 
+  ngModel sí es bidireccional.
+-->

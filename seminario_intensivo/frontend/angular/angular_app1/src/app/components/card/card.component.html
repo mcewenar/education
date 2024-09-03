@@ -1,0 +1,33 @@
+<!--Ngfor siempre en el padre del bloque-->
+<div  class="card-grid" *ngFor="let product of products; index as i; first as isFirst">
+    <div *ngIf="product.stock>0">
+       <ng-container *ngTemplateOutlet="full"></ng-container>
+    </div>
+
+    <!--ng template: son como contenedores-->
+    <ng-template #simple>
+        <div class="name">{{product.name}}</div>
+        <span class="price2">{{product.price | currency:currency:country}}</span>
+        <div class="describe">{{product.describe}}</div>
+        <button class="primary-btn" type="button">Agregar producto</button>
+    </ng-template>
+
+    <ng-template #full>
+        <div class="name">{{product.name}}</div>
+        <div class="describe">{{product.describe}}</div>
+         <!--PIPE: CURRENCY, LOWERCASE, UPPERCASE, ETC.-->
+        <div class="price" style="float: left;">{{product.price | currency:currency:country}}</div>
+        <button class="primary-btn" type="button">Agregar producto</button>
+    </ng-template>
+    
+</div>
+<!--*ngFor="let user of users; index as i; first as isFirst"-->
+<!--<div *ngSwitchCase='"simple"''></div>-->
+
+<!--DIRECTIVAS DE TIPO ATRIBUTO: ngModel,ngClass,ngStyle
+
+<!--ngModel: directiva bidireccional, usada mucho en formularios
+  La interpolación {{}} manda del código typescript al html, el 
+  ngModel sí es bidireccional.
+-->
+
