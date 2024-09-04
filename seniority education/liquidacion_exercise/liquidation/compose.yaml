@@ -1,9 +1,34 @@
-services:
-  mongodb:
-    image: 'mongo:latest'
-    environment:
-      - 'MONGO_INITDB_DATABASE=mydatabase'
-      - 'MONGO_INITDB_ROOT_PASSWORD=secret'
-      - 'MONGO_INITDB_ROOT_USERNAME=root'
-    ports:
-      - '27017'
+# Mongo docker image
+#version: '3.7'
+
+#services:
+#  mongodb:
+#    image: 'mongo:latest'
+#    restart: on-failure
+#    environment:
+#      - 'MONGO_INITDB_DATABASE=liquidation'
+#      - 'MONGO_INITDB_ROOT_PASSWORD=root'
+#      - 'MONGO_INITDB_ROOT_USERNAME=root@123'
+#  mongo-express:
+#    image: mongo-express
+#    restart: always
+#    ports:
+#      - 8081:8081
+#    environment:
+#      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+#      ME_CONFIG_MONGODB_ADMINPASSWORD: root@123
+
+#services:
+#  db:
+#    image: postgres
+#    restart: always
+#    environment:
+#      POSTGRES_PASSWORD: postgres
+#    ports:
+#      - 5432:5432
+#
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8081:8080

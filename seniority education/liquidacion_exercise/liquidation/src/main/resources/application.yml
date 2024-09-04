@@ -1,0 +1,38 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: liquidationdb
+      #username: root
+      #password: root@123
+      #authentication-database: admin
+# Change the uat and prod profiles
+server:
+  port: 8080
+---
+spring:
+  config:
+    activate:
+      on-profile: unit_test
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      #database: spring_reactive_test
+      #username: root
+      #password: root@123
+      #authentication-database: admin
+server:
+  port: 8080
+#---
+#spring:
+#  profiles: prod
+#  data:
+#    mongodb:
+#      host: localhost
+#      port: 27017
+#      database: localDB
