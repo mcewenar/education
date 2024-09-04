@@ -8,8 +8,6 @@ import java.time.format.DateTimeFormatter;
 public class EmployeeMapperData {
 
     private static final DateTimeFormatter DB_FORMATTER = DateTimeFormatter.ofPattern("yyyy/dd/MM");
-    private static final DateTimeFormatter LOCAL_DATE_FORMATTER = DateTimeFormatter.ISO_LOCAL_DATE;
-
 
     public static Employee toDomain(EmployeeData employeeData) {
         return Employee.builder()
@@ -37,6 +35,6 @@ public class EmployeeMapperData {
 
 
     public static LocalDate toLocalDate(String stringYYYYddMM) {
-        return LocalDate.parse(stringYYYYddMM, LOCAL_DATE_FORMATTER);
+        return LocalDate.parse(stringYYYYddMM, DB_FORMATTER);
     }
 }
