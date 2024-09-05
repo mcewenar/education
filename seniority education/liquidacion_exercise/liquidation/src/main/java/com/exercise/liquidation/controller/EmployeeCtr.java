@@ -35,14 +35,5 @@ public class EmployeeCtr {
                 .doOnError(exc -> Mono.error(new CustomException("error al crear " + employeeDTO)));
 
     }
-
-    /*@PostMapping("/employees")
-    public Mono<List<EmployeeDTO>> postEmployee(@Valid @RequestBody EmployeeDTO employeeDTO) {
-        log.info("getting all employees");
-        return employeeImp.findAllEmployee()
-                .switchIfEmpty(Mono.error(new CustomException("No se encontro informacion en la busqueda.")));
-    }
-
-     */
 }
 
