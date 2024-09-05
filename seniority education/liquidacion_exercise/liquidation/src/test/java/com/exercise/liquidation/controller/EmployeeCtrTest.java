@@ -14,12 +14,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
-class EmployeeCtr {
+class EmployeeCtrTest {
     @MockBean
     private EmployeeImp employeeImp;
 
     @InjectMocks
-    private EmployeeCtr employeeCtr;
+    private EmployeeCtrTest employeeCtrTest;
 
     @Test
     void findAllCitiesTest() {
@@ -33,7 +33,7 @@ class EmployeeCtr {
 
         when(employeeImp.findAllEmployees())
                 .thenReturn(Mono.just(citiesResponseDTO));
-        Mono<List<EmployeeDTO>> resultado = employeeCtr.employeeImp.findAllEmployees()
+        Mono<List<EmployeeDTO>> resultado = employeeCtrTest.employeeImp.findAllEmployees()
                 .thenReturn(citiesResponseDTO);
 
         assertEquals(resultado.block(), citiesResponseDTO);

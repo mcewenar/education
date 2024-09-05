@@ -3,8 +3,8 @@ package com.exercise.liquidation.controller;
 import com.exercise.liquidation.controller.dto.EmployeeDTO;
 import com.exercise.liquidation.model.EmployeeMapper;
 import com.exercise.liquidation.model.exception.CustomException;
-import com.exercise.liquidation.service.EmployeeImp;
 
+import com.exercise.liquidation.service.EmployeeServ;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
@@ -19,7 +19,7 @@ import java.util.List;
 @Log
 public class EmployeeCtr {
 
-    private final EmployeeImp employeeImp;
+    private final EmployeeServ employeeImp;
 
     @GetMapping(value = "/employees", consumes = {"text/plain", "application/*"})
     public Mono<List<EmployeeDTO>> employees() {
@@ -30,10 +30,9 @@ public class EmployeeCtr {
 
     @PostMapping(value = "/employee", consumes = {"text/plain", "application/*"})
     public Mono<EmployeeDTO> postEmployee(@Valid @RequestBody EmployeeDTO employeeDTO){
-        log.info("getting all employees");
+        log.info("post an employee");
         return employeeImp.createEmployee(EmployeeMapper.fromEmployeeDTOToDomain(employeeDTO))
                 .doOnError(exc -> Mono.error(new CustomException("error al crear " + employeeDTO)));
-        //return new ResponseEntity<>(String.format("OBJECT WITH CC %s wasn't created!",employeeDTO.getAuthorCc().getAuthorCCM()), HttpStatus.CONFLICT);
 
     }
 

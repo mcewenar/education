@@ -4,6 +4,7 @@ import com.exercise.liquidation.controller.dto.EmployeeDTO;
 import com.exercise.liquidation.model.Employee;
 import com.exercise.liquidation.model.EmployeeMapper;
 import com.exercise.liquidation.repository.EmployeeRepositoyAdapter;
+import com.exercise.liquidation.service.gateway.EmployeeGateway;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,9 +15,9 @@ import java.util.List;
 @Service
 @Data
 @Slf4j
-public class EmployeeImp implements EmployeeServ {
+public class EmployeeImp implements EmployeeServ  {
 
-    private final EmployeeRepositoyAdapter employeeRepositoyAdapter;
+    private final EmployeeGateway employeeRepositoyAdapter;
 
     @Override
     public Mono<List<EmployeeDTO>> findAllEmployees() {
