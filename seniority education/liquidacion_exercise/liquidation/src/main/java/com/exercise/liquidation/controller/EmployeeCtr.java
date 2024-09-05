@@ -31,7 +31,7 @@ public class EmployeeCtr {
     @PostMapping(value = "/employee", consumes = {"text/plain", "application/*"})
     public Mono<EmployeeDTO> postEmployee(@Valid @RequestBody EmployeeDTO employeeDTO){
         log.info("post an employee");
-        return employeeImp.createEmployee(EmployeeMapper.fromEmployeeDTOToDomain(employeeDTO))
+        return employeeImp.createEmployee(Mono.just(EmployeeMapper.fromEmployeeDTOToDomain(employeeDTO)))
                 .doOnError(exc -> Mono.error(new CustomException("error al crear " + employeeDTO)));
 
     }

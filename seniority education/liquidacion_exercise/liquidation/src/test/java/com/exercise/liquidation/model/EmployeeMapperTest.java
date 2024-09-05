@@ -3,14 +3,12 @@ package com.exercise.liquidation.model;
 import com.exercise.liquidation.controller.dto.EmployeeDTO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import reactor.core.publisher.Mono;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -77,11 +75,11 @@ class EmployeeMapperTest {
         constructor.setAccessible(true);
         constructor.newInstance();
 
-        final Mono<Employee> employeeMono = EmployeeMapper.fromEmployeeDTOToDomain(employeeDTO);
+        final Employee employeeMono = EmployeeMapper.fromEmployeeDTOToDomain(employeeDTO);
         assertThat(employeeMono).isNotNull();
         Assertions.assertTrue(Modifier.isPublic(constructor.getModifiers()));
-        Assertions.assertEquals(employee1.getSalary().getSalary(), Objects.requireNonNull(employeeMono.block()).getSalary().getSalary());
-        Assertions.assertEquals(employee1.getDocumentId().getDocumentId(), Objects.requireNonNull(employeeMono.block()).getDocumentId().getDocumentId());
+        Assertions.assertEquals(employee1.getSalary().getSalary(), employeeMono.getSalary().getSalary());
+        Assertions.assertEquals(employee1.getDocumentId().getDocumentId(), employeeMono.getDocumentId().getDocumentId());
     }
 
 

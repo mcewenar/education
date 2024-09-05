@@ -26,13 +26,13 @@ public class EmployeeMapper {
                                 .build();
     }
 
-    public static Mono<Employee> fromEmployeeDTOToDomain(EmployeeDTO employeeDTO){
-        return Mono.just(Employee.builder()
+    public static Employee fromEmployeeDTOToDomain(EmployeeDTO employeeDTO){
+        return Employee.builder()
                 .documentId(new DocumentId(employeeDTO.getDocumentId()))
                 .name(new Name(employeeDTO.getName()))
                 .startDate(new StartDate(employeeDTO.getStartDate()))
                 .position(new Position(employeeDTO.getPosition()))
                 .salary(new Salary(employeeDTO.getSalary()))
-                .build());
+                .build();
     }
 }
