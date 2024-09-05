@@ -6,7 +6,7 @@ import com.exercise.liquidation.model.exception.CustomException;
 import com.exercise.liquidation.service.EmployeeImp;
 
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
 import java.util.List;
 
 @RestController
-@RequiredArgsConstructor
+@AllArgsConstructor
 @RequestMapping("/liquidation")
 @Log
 public class EmployeeCtr {
@@ -24,7 +24,7 @@ public class EmployeeCtr {
     @GetMapping(value = "/employees", consumes = {"text/plain", "application/*"})
     public Mono<List<EmployeeDTO>> employees() {
         log.info("getting all employees");
-        return employeeImp.findAllEmployee()
+        return employeeImp.findAllEmployees()
                 .switchIfEmpty(Mono.error(new CustomException("No se encontro informacion en la busqueda.")));
     }
 

@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono;
 import java.util.List;
 
 public interface EmployeeServ {
-    Mono<List<EmployeeDTO>> findAllEmployee();
+    Mono<List<EmployeeDTO>> findAllEmployees();
     Mono<EmployeeDTO> createEmployee(Mono<Employee> employee);
 
 }

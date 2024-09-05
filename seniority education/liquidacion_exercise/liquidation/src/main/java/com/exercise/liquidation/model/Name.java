@@ -1,7 +1,6 @@
 package com.exercise.liquidation.model;
 
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,8 +10,6 @@ import java.util.Objects;
 @NoArgsConstructor
 public class Name {
 
-    @Size(min=1, max=30)
-    @Pattern(regexp="^[a-zA-Z]+$")
     private String name;
 
     public Name(String name) {

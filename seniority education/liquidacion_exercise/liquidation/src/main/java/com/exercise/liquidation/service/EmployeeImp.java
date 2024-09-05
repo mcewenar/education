@@ -18,8 +18,9 @@ public class EmployeeImp implements EmployeeServ {
 
     private final EmployeeRepositoyAdapter employeeRepositoyAdapter;
 
-    public Mono<List<EmployeeDTO>> findAllEmployee() {
-        return employeeRepositoyAdapter.findEmployee().map(EmployeeMapper::fromEmployeeListDomainToDTO);
+    @Override
+    public Mono<List<EmployeeDTO>> findAllEmployees() {
+        return employeeRepositoyAdapter.findAllEmployees().map(EmployeeMapper::fromEmployeeListDomainToDTO);
 
     }
 

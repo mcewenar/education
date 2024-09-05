@@ -15,7 +15,7 @@ public class EmployeeRepositoyAdapter {
 
     private final EmployeeDataRepository repository;
 
-    public Mono<List<Employee>> findEmployee() {
+    public Mono<List<Employee>> findAllEmployees() {
         return repository.findAll().map(EmployeeMapperData::toDomain).collectList();
     }
 
