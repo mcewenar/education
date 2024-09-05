@@ -17,18 +17,18 @@ import java.util.List;
 @Slf4j
 public class EmployeeImp implements EmployeeServ  {
 
-    private final EmployeeGateway employeeRepositoyAdapter;
+    private final EmployeeRepositoyAdapter employeeGateway;
 
     @Override
     public Mono<List<EmployeeDTO>> findAllEmployees() {
-        return employeeRepositoyAdapter.findAllEmployees().map(EmployeeMapper::fromEmployeeListDomainToDTO);
+        return employeeGateway.findAllEmployees().map(EmployeeMapper::fromEmployeeListDomainToDTO);
 
     }
 
     @Override
     public Mono<EmployeeDTO> createEmployee(Mono<Employee> employeeDom) {
         return employeeDom.flatMap(employee ->
-                employeeRepositoyAdapter.saveEmployee(employee)
+                employeeGateway.saveEmployee(employee)
                         .map(EmployeeMapper::fromEmployeeDomainToDTO));
     }
 
