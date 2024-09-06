@@ -17,7 +17,7 @@ import java.util.List;
 @Slf4j
 public class EmployeeImp implements EmployeeServ  {
 
-    private final EmployeeRepositoyAdapter employeeGateway;
+    private final EmployeeGateway employeeGateway;
 
     @Override
     public Mono<List<EmployeeDTO>> findAllEmployees() {
