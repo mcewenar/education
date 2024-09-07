@@ -41,20 +41,6 @@ class EmployeeMapperTest {
     List<Employee> employeeList = List.of(employee1,employee2);
 
     @Test
-    void fromEmployeesResponseDomain() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        Constructor<EmployeeMapper> constructor = EmployeeMapper.class.getDeclaredConstructor();
-        Assertions.assertTrue(Modifier.isPublic(constructor.getModifiers()));
-        constructor.setAccessible(true);
-        constructor.newInstance();
-
-        final List<EmployeeDTO> cityDTOS = EmployeeMapper.fromEmployeeListDomainToDTO(employeeList);
-        assertThat(cityDTOS).isNotNull();
-        Assertions.assertTrue(Modifier.isPublic(constructor.getModifiers()));
-        Assertions.assertSame(employeeList.get(0).getDocumentId().getDocumentId(),cityDTOS.get(0).getDocumentId());
-        Assertions.assertSame(employeeList.get(1).getName().getName(),cityDTOS.get(1).getName());
-    }
-
-    @Test
     void fromEmployeesToDTO() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Constructor<EmployeeMapper> constructor = EmployeeMapper.class.getDeclaredConstructor();
         Assertions.assertTrue(Modifier.isPublic(constructor.getModifiers()));

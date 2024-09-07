@@ -9,9 +9,8 @@ import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.List;
 
 @RestController
 @AllArgsConstructor
@@ -22,7 +21,7 @@ public class EmployeeCtr {
     private final EmployeeServ employeeImp;
 
     @GetMapping(value = "/employees", consumes = {"text/plain", "application/*"})
-    public Mono<List<EmployeeDTO>> employees() {
+    public Flux<EmployeeDTO> employees() {
         log.info("getting all employees");
         return employeeImp.findAllEmployees()
                 .switchIfEmpty(Mono.error(new CustomException("No se encontro informacion en la busqueda.")));

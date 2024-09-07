@@ -2,12 +2,11 @@ package com.exercise.liquidation.service;
 
 import com.exercise.liquidation.controller.dto.EmployeeDTO;
 import com.exercise.liquidation.model.Employee;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.List;
-
 public interface EmployeeServ {
-    Mono<List<EmployeeDTO>> findAllEmployees();
+    Flux<EmployeeDTO> findAllEmployees();
     Mono<EmployeeDTO> createEmployee(Mono<Employee> employee);
 
 }

@@ -5,10 +5,9 @@ import com.exercise.liquidation.service.EmployeeImp;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import reactor.core.publisher.Mono;
+import reactor.core.publisher.Flux;
 
 import java.time.LocalDate;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -23,7 +22,7 @@ class EmployeeCtrTest {
 
     @Test
     void findAllCitiesTest() {
-        List<EmployeeDTO> citiesResponseDTO = List.of(EmployeeDTO.builder()
+        Flux<EmployeeDTO> citiesResponseDTO = Flux.just(EmployeeDTO.builder()
                         .documentId(2)
                         .name("dav")
                         .startDate(LocalDate.of(2015,3,3))
@@ -32,11 +31,10 @@ class EmployeeCtrTest {
                 .build());
 
         when(employeeImp.findAllEmployees())
-                .thenReturn(Mono.just(citiesResponseDTO));
-        Mono<List<EmployeeDTO>> resultado = employeeCtrTest.employeeImp.findAllEmployees()
                 .thenReturn(citiesResponseDTO);
+        Flux<EmployeeDTO> resultado = employeeCtrTest.employeeImp.findAllEmployees();
 
-        assertEquals(resultado.block(), citiesResponseDTO);
+        assertEquals(resultado, citiesResponseDTO);
         assertNotNull(resultado);
     }
 }
