@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.co.ias'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':usecase')
+    implementation project(':model')
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.3.4'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+}
+
+test {
+    useJUnitPlatform()
+}
