@@ -1,0 +1,2 @@
+microservicio_usuarios: https://nous-usuarios-ms.herokuapp.com/
+microservicio_proveedores: https://proveedoresnous-ms.herokuapp.com/

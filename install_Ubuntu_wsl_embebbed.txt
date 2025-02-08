@@ -1,0 +1,18 @@
+1. Habilitar WSL1: dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+2. Habilitar Plataforma de máquina virtual: dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+3. Configurar WSL2 como versión por defecto para todas las distros que se vayan a instalar. Se debe lanzar el siguiente comando con PowerShell: wsl --set-default-version 2
+En caso de que alguna de las distro queden en la versión 1 de WSL se pueden configurar para que trabajen con la versión 2 de WSL con el 	siguiente comando: wsl --set-version distroName 2
+4. Descargar y ejecutar el script de instalación con el siguiente comando en Powershell (NO ejecutar como administrador): Invoke-WebRequest
+5. Nota: en caso de problemas al configurar la distro, luego de haberla instalado en WSL, se puede ejecutar el siguiente comando dentro de 	la distro: /bin/bash -c "$(curl -fsSL "
+6. Validar el explorador de Windows desde la terminal de la distro: explorer.exe .
+7. Validar la integración de Visual Studio Code de Windows dentro de la terminal de la distro: code . 
+8. Instalar la versión de ubuntu requerida: wsl --install -d Ubuntu-20.04
+9. Asignar la distribucion recientemente descargada de linux: wsl --setdefault Ubuntu-20.04
+10. Instalar docker en WSL2: /bin/bash -c "$(curl -fsSL www.dfjdfjdf.com"
+11. Lanzar el siguiente comando en la distro de WSL: /bin/bash -c "$(curl -fsSL 	https://artifactory.apps.bancolombia.com/artifactory/wsl/dockerLab.sh)"
+12. Agregar el mirror por defecto: sudo vi /etc/docker/daemon.json
+13. Reiniciar el daemom de docker: sudo service docker restart
+14. Para verificar que la caché esté configurada correctamente, ejecuta el siguiente comando: docker system info
+15. Install docker compose into Ubuntu: /bin/bash -c "$(curl -fsSL https:sdsdsd/wsl/docker-compose/installDocker.sh)"
+16. Install AWS CLI: sudo apt install awscli
+17. Init containers: docker-compose -f docker-compose.yml up -d

@@ -1,0 +1,270 @@
+Kubernetes: is a orquestation containers platform that automate deploys, 
+management, scalability apps dockerized.
+
+Kubernetes tiene la habilidad de que si falla un pod, 
+	este lo vuelve a crear automáticamente; se replica.
+	Entonces, si se quiere eliminar, primero hay
+	que eliminar el deployment y luego los pods.
+
+Apps need to be wrapped in Pods to run on Kubernetes
+
+
+No confundir on-demand vs. on-premise.
+
+Deploy app in K8s(sometimes shortened to K8sn  with the 8 standing for the number of letters between the “K” and the “s”).
+
+¿Qué es un POD? 
+Es un set de contenedores con un solo IP, es decir, comparten el mismo Namespace de red.
+
+¿Qué es Overlay network?
+Permite compartir una red entre todos los PODS no importa en qué nodo esté.
+
+¿Qué es un Servicio de Kubernetes?
+	-Cluster IP (IP que no cambia y que expone a varios POD).
+
+Se tienen Deploys, namespaces, pods, services en Kubernetes.
+¿En qué se diferencian? 
+	1. Cada pod suele ser un contenedor. Si mato un servicio automáticamente los pods se mueren con ello.
+
+
+
+
+
+
+TIPO de SERVICIOS EN KUBERNETES:
+ -Load balancer: crea un balanceador de carga en el proveedor cloud (AWS, Google, Azure, etc.)
+ -Ingress: crea reglas basadas en el subdominio.
+ -Cluster IP.
+ -Node port: crea puerto en el nodo que llega a mi tráfico.
+
+
+Kubernetes follows a master-node architecture. Master manage the cluster while that nodes execute apps dockerized.
+Maneja master y workers. 
+	1.Cada worker (NODO) corre un agente de kubernetes que se llama kubelet.
+		a. Es donde vamos a correr los pods de la app.
+	2. En Master tenemos 
+		a. api server (expone una interfaz para que diferentes clientes puedan interactuar
+		kubernetes).
+		b. Controller Manager: el que maneja lo que pasa en el cluster.
+		c. Scheduler: recibir las órdenes del controller manager y mueve los PODS.
+		d. Base de datos etcd donde guarda todo. Tiene el estado de los cluster de Kubernetes y también la información y configuraciones del CLuster.
+
+
+Kubernetes se maneja con manifiestos declarativos (se llaman deployments)  (tipo yaml):
+Example:
+	apiVersion: v1
+	kind: deployment (el tipo)
+	metadata:
+	   app: backend
+	spec:
+	   replicas: 3
+	   containers:
+	       -name: miapp-backend (name pod)
+		image: pablokbs/backend (LA IMAGEN que se va a correr para ejecutar la aplicación)
+		env:
+		   -name: DEBUG
+                   -value: true
+
+Kubernetes components:
+   -Pods: basic units of deploy.
+   -Services: Expose apps in the network.
+   -Deployments: management the apps updates.
+   -Namespaces: gather resources. Space to create virtual machine into cluster
+
+Kubernates basic commands: 
+	-kubectl get pods: list all pods.
+	-kubectl explain pod.spec.restartPolicy: drills into the Pod restartPolicy attribute.
+	-kubectl config view: command to view your kubeconfig
+	-kubectl explain pods --recursive: shows a complete list of Pod attributes and returns over 1,000 lines.
+	-kubectl config current-context: to see current context
+	-kubectl create -f <file>: create sources from a file.
+	-kubectl apply -f <pod_name>: create a pod and run it. 
+			Example: kubectl apply -f pod2.yml
+	-kubectl get pod -o wide: show all pods with name
+	-kubectl exec eduard-pod: assign a name
+	-kubectl api-resource: show all active resources from kubectl
+	-kubectl describe ns default: show all default namespaces
+	-kubectl create nm <name_you_want>: crear un namespace con el nombre que quieras
+	-kubectl applu -f <namespace>: crea un pod a partir de un namespace creado.
+	-kubectl get ns: list all namespaces created
+	-kubectl delete ns <name_namespace>: delete a namespace by its name
+	-kubectl delete deployment <deploy_file>: delete a deploy file
+	-kubectl delete pod <pod_name>: delete a pod.
+	-kubectl scale deployment <nombre-del-deployment> --replicas=0: Una forma rapida de escalar a 0 las cargas
+	-kubectl get deploy: ver todos los deploy escalados
+	-kubectl scale deploy <name-pod> --replicas <#>: escalas pod # indicado
+	-kubectl apply -f deployment.yml: aplicar archivo de despliegue
+	-kubectl get deployments: verificar que el despliegue está corriendo
+	-kubectl get pods: verificar todos los pods.
+	-kubectl apply -f service.yaml: subir la info del archivo y se ejecuta.
+	-kubectl get services: verificar que el servicio está corriendo.
+	-minikube service web-app-service --url: obtener la URL del servicio (si uso minikube)
+	-kubectl logs <pod-name>: para ver los logs de un pod en espeífico
+	-kubectl get pods -o widec: ver las ip de cada pod.
+	-kubectl exec -it <pod-name> -- /bin/bash: acceder a un pod en ejecución
+	-kubectl get svc: 
+	ESCALAR EL DESPLIEGUE:
+	-kubectl scale deployment/web-app-deployment --replicas=5: incrementa o disminuye el número de réplicas.
+	-kubectl get pods: verifica que los pods estén corriendo.
+	-kubectl get hpa -w: escalamiento horizonal? HorizontalPodAutoscaler (HPA for short) automatically updates a workload resource (such as a Deployment or StatefulSet), with the aim of automatically
+
+	DENTRO DE AWS:
+	nano <file_name.yml>: editor de consola de Linux. Crea un archivo con el nombre indicado.
+	consola de AWS basada en Linux.
+	cat <file_name>: ver el archivo
+	ctrl + o: guarda la información
+	ctrl + x: sale del modo de edición.
+	ls: lista los archivos dentro de la ubicación del directorio.
+	kubectl apply -f <name_pod>: crea y sube el pod a AWS dentro de la consola.
+	kubectl get pods: obtener todos los pods corriendo
+	kubectl get pods -o wide: muestra los pods corriendo con direcciones IP
+	kubectl get svc: muestra las apps creadas.
+	kubectl describe svc <name_file>: da la información del pod/deploy
+
+
+Kubernates pattern design:
+	-Sidecar: contenedor adicional que extiende la funcionalidad de la aplicación principal.
+	-Adapter: transforma la interfaz de un contendero.
+	-Ambassador: contenedor que actúa como proxy.
+
+Kubernetes en AWS EKS:
+	Introducción:
+		AWS EKS: es un servicios que facilita la ejecución de Kubernetes en AWS sin necesidad de instalar y operar su propio clúster de Kubernetes.
+	EKS(AWS), AKS(Azure), GKE(Google): son servicios gestionados de kubernetes. Cada uno ofrece características únicas y se integra con sus respectivos ecosistemas de nube.
+
+	Use cases: 1. Despliegue de microservicios.
+		   2. Aplicaciones de machine learning.
+		   3. Procesamiento de datos en tiempo real.
+ 	           4. Aplicaciones web escalables.
+
+
+
+
+COMANDOS INDOSWPENSABLES PARA KUBERNETES:
+
+-validar un manifiesto (asegurar que todos mis manifiestos están correctos): kubernetes create --dry-run=client --validate -f 02 <nombre_archivo> 
+-Obtener todos los nodos: kubernetes get nodes
+-obtener los deploys: kubernetes get deploys
+-para escalar: kubernetes k scale deploy/<file_name> --replicas=5
+-obtener documentación o explicación: kubernetes explain 
+					(o también) kubernetes k explain pod.espec 
+					kubernetes explain deployment.spec.replicas
+-obtener todos los pods: kubernetes get pods
+			 kubernetes get pods --sort-by=metadata.name (ordenado algabeticamente)
+			 kubernetes kubernetes pods --sort-by=metadata.creationTimestamp (orden por vejez)
+crea contenedor: kubernetes run --rm -it --image=alpine -- sh
+crear manifiesto kubernetes con comando: kubernetes create deploy nginx --image=nginx --dry-run=client -o yaml
+crear manifiesto con otras opciones: kubernetes create deploy nginx --image=nginx --restart=Never --limits='cpu=300,memory=512mi' --dry-run=client -o yaml
+crear servicio nginx: kubernetes expose deployment nginx --type=ClusterIP --port=80
+crear deploys: kubectl create deploy web --replicas=2 --image=nginx:1.13.2
+configurar un deployment a una versuión más actualizada: kubectl set image deployment web nginx=nginx:1.14.2 --record
+ver el estado del deployment: kubernetes rollout status deployment/web
+ver historial: kubernetes rollout history deployment/web
+devolver versión; kubernetes rollout undo deployment/web --to-revision=1
+saber información de un pod: kubernates describe pod 
+
+
+Balanceadores de carga: 
+	-Tipos:
+		ClusterIP: Acceso interno.
+		NodePort: Acceso externo.
+		LoadBalancer: balanceo de carga externo.
+
+
+		
+
+Patrones de partición: 
+	Sharding: División de datos.
+	Hash Partitioning: Distribucion basada en hash.
+	Range partioning: Division por rangos.
+
+
+
+Pasos para usar Kubernetes (K8):
+	1. INSTALAR kubectl
+	2. Verificar que esté en el sistema usando: 
+		kubectl version
+	3. Ver nodos en la máquina: 
+		kubectl get nodes
+	4. Para ver el manifiesto de K8: 
+		kubectl config view
+
+Estructura de un manifiesto en K8:
+
+IMPORTANTE: PARA EJECUTAR UN MANIFIESTO, HAY QUE ESTAR DENTRO DE LA CARPETA DONDE SE ALOJA EL MANIFIESTO.
+
+apiVersion: v1 (la version)
+kind: Pod (el tipo: servicio, pod, deployment, etc)
+metadata:
+	name: eduard-pod (nombre del POD)
+	labels:
+		zone: prod
+		version: v1
+spec:
+	containers:
+		-name: hello-ctr (name pod)
+		image: osmer15/app-mongo:1
+		ports:
+		- containerPort: 3000
+		resources:
+		  limits:
+		      memory: 256Mi
+		      cpu: 0.5
+	
+ 
+
+
+DEPLOYMENT EXAMPLE:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-osmer
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: hello-world
+  revisionHistoryLimit: 5
+  progressDeadlineSeconds: 300
+  minReadySeconds: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: osmer-pod
+        image: osmer15/app-01:1
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            memory: 128Mi
+            cpu: 0.1
+
+
+CREATE A SERVICE:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: lb2-svc
+  labels:
+    app: hello-world
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 3000
+    protocol: TCP
+  selector:
+    app: hello-world
+
+
+Liveness sirve para que kubernetes verifique si tu pod está vivo.
+Readiness sirve para que kubernetes verifique que tu pod está listo para recibir tráfico.

@@ -1,0 +1,41 @@
+La disponibilidad bajo demando de recursos de computación como servicios.
+
+IoC = Infraestructure as a Code: gestión, administración de la infraestructura como código. Provee recursos de manera automática para alojar un pryecto, generar capacidad en una BD, etc.
+
+DevOps/DevSecOps: conjunto de buenas prácticas que acompañan al Desarrollo de software y las operaciones de TI. 
+	Hace más rápido el Ciclo de vida del software y entrega continua de alta calidad (CI/CD). eL DevSecOps hace lo mismo pero adicional con pruebas de seguridad.
+
+Tipos de nubes: 
+	-Pública: un entorno de nube creado a partir de recursos ajenos al usuario final que pueden redistribuirse a otros inquilinos. AWS, Google Cloud, Microsoft Azure, etc.
+		Si varios usuarios pueden acceder a estos sin ningún tipo de limitante o permiso, significa que es nube pública.
+	
+	-Híbrida: Varios entornos de nube con cierto nivel de portabilidad, organización y gestión de las cargas de trabajo entre ellos. Es un entorno de TI aparentemente único 
+		creado a partir de múltiples entornos que se
+		 que se conectan mediante redes de área local (LAN), redes de área amplia (WAN), redes privadas virtuales (VPN) o API.
+	
+	-Privada: diseñado sólo para el usuario final. Son privadas cuando la infraestructura de TI subyacente se destina a un solo cliente con acceso complemetamente aislado.
+		 Se mantiene en una red privada y el hardware/software es dedicado para la propia organización. Usuarios externos a la empresa no pueden acceder a este.
+
+	-Multicloud: El uso de al menos dos servicios de nube de por lo menos dos proveedores de nube distintas. Se usa para controlar mejor los datos confidenciales o como estratedia ante
+		    ante desastres. Se hacen híbridad cuando se conectan varias nubes.
+
+SERVICIOS QUE SE PUEDEN ENCONTRAR EN LAS NUBES PRINCIPALES:
+	-SaaS: Software as a Service, se encuentran tecnologías como Google Docs, Spotify, es decir, herramientas de software listos para el usuario final.
+	-PaaS: Platform as a service, infraestructura para personas con conocimientos en TI o desarrollo. Lambdas de AWS
+	-IaaS: Infraestructure as a services, para personas con conocimiento de infraestructura/lenguajes
+	-X-aaS: X as a Service, o sea, cualquier cosa como servicio o todo como servicio.
+
+
+¿Qués es un pipeline?
+Consiste en una cadena de procesos conectados de forma tal que 
+la salida de cada elemento es la entrada del próximo.
+
+Pipeline de build y pipeline de release.
+
+De release: este pipeline refleja el proceso de entrega continua. 
+Mediante este pipeline realizaremos el proceso de despliegue de forma automática.
+
+Controles automáticos:
+monitoreos automáticos por parte de los devops, para verificar que los equipos sí están
+cumpliendo con los lineamientos.
+

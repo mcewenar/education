@@ -1,0 +1,70 @@
+-------------Comandos iniciales-------------
+1) Crear ambiente
+python -m venv env
+2) Activar ambiente 
+env\Scripts\activate
+3) Desactivar el ambiente
+deactivate
+4) Instalar Django
+pip install django
+pip install djangorestframework
+5) Crear proyecto django
+django-admin startproject NOMBRE
+6) Correr Proyecto
+python manage.py runserver
+7)Corre un archivo
+pip install -r requirements.txt
+8) Crear el requirements.txt automáticamente:
+pip freeze > requirements.txt
+9)Hacer migración:
+python manage.py makemigrations
+10)Migrarlo a la bd:
+python manage.py migrate
+11)
+
+
+--------Heroku Git----------
+1) Para loguearse con Heroku
+heroku login
+2) Crear repositorio (si no existe)
+git init
+3) crear el remoto con el proyecto be desplegado en Heroku
+heroku git:remote -a NombreProyectoDesplegado
+4)para verificar si hay cambios
+git status
+5) agregar al staging area:
+git add .
+6) git commit -am "comentarios"
+7) git push heroku master
+
+
+--------Crear Migraciones----------
+Python manage.py makemigrations
+Python manage.py migrate
+
+
+-------Crear un admin--------
+python manage.py createsuperuser
+
+
+--------------------FK--------------------
+llave_foranea = models.ForeignKey(ClaseReferencia,related_name='transactions',on_delete=models.SET_NULL, null=True)
+
+    Llaves foráneas:
+    1a1: models.OneToOneField
+    1 a muchos: models.ForeignKey
+    muchos a muchos: models.ManyToMany
+
+    Llaves foráneas:
+    1a1: models.OneToOneField
+    1 a muchos: models.ForeignKey
+    muchos a muchos: models.ManyToMany
+    Ejemplo: #llave_foranea = models.ForeignKey(ClaseReferencia,related_name='transactions',on_delete=models.SET_NULL, null=True)
+
+Información de Django
+https://www.webforefront.com/django/modeldatatypesandvalidation.html
+
+
+
+# install from pypi
+pip install django-generic-aggregation

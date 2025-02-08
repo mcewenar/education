@@ -1,0 +1,13 @@
+Preparación
+Este curso le ayudará a prepararse para el examen de certificación de AWS Certified Solutions Architect - Associate. Debe utilizar los recursos que se indican a continuación para comprender qué esperar y para asegurarse de que está completamente preparado antes de realizar el examen.
+
+Una nueva versión del examen AWS Certified Solutions Architect - Associate (SAA-C02) estará disponible a partir del 23 de marzo de 2020. La versión anterior del examen AWS Certified Solutions Architect - Associate (SAA-C01) también estará disponible hasta el 1 de julio de 2020.
+
+Lea la página web de información general sobre la certificaciónLinks to an external site.
+Descargue y lea la guía del examen (SAA-C01Links to an external site. or SAA-C02Links to an external site.)
+Descargue y pruebe las preguntas de ejemplo (SAA-C01Links to an external site. or SAA-C02Links to an external site.)
+Las respuestas a las preguntas comunes se encuentran en las preguntas frecuentes del examenLinks to an external site.
+Se recomienda encarecidamente que lea los documentos técnicos de AWSLinks to an external site. que cubren los servicios y conceptos de este examen, especialmente los que cubren el marco bien diseñadoLinks to an external site..
+Examen de certificación
+Regístrese para su examen de certificaciónLinks to an external site.
+Las respuestas a preguntas comunes sobre certificación se encuentran en las preguntas frecuentes sobre certificaciónLinks to an external site.

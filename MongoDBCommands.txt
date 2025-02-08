@@ -1,0 +1,25 @@
+Comandos en consola para usar MongoDB:
+1. Usar Mongo dentro del contenedor:
+mongo
+2. Mostrar BDs:
+show dbs;
+3. Crear una Base de Datos y la usa:
+use <nombreBD>
+4. Insertar datos a la BD creada:
+db.<nombreBD>.insert({clave:valor,
+                      clave2:valor2})
+5. Mostrar las colecciones creadas:
+show collections;
+6. Mostrar todos los registros:
+db.<nombreBD>.find()
+7. Filtrar un dato deseado:
+db.<nombreBD>.find({claveDeseado:valorDeseado}) Ó db.<nombreBD>.find({"_id":ObjectId("hashID")})
+8. Eliminar un documento (object):
+db.<nombreBD>.remove({ObjectId}) ó db.<nombreBD>.remove({clave:valor})
+9. Eliminar todos los documentos de una colección:
+db.<nombreBD>.remove({})
+10. Actualizar un documento en una colección:
+db.<nombreBD>.update({"_id":ObjectId("hashID)},{"$set":{"apellido":"mendez"}})
+11. Ver todos los documentos de una forma organizada:
+db.<nombreBD>.find().pretty()
+12. 

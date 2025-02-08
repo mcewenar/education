@@ -1,0 +1,443 @@
+Settings AWS credentials: 
+AWS configure
+
+
+Algunos servicios de AWS:
+EC2:
+S3:
+RDS:
+Lambda:
+
+
+nano <file_name.yml>: editor de consola de Linux. Crea un archivo con el nombre indicado.
+	consola de AWS basada en Linux.
+cat <file_name>: ver el archivo
+ctrl + o: guarda la información
+ctrl + x: sale del modo de edición.
+ls: lista los archivos dentro de la ubicación del directorio.
+kubectl apply -f <name_pod>: crea y sube el pod a AWS dentro de la consola.
+kubectl get pods: obtener todos los pods corriendo
+kubectl get pods -o wide: muestra los pods corriendo con direcciones IP
+kubectl get svc: muestra las apps creadas.
+kubectl describe svc <name_file>: da la información del pod/deploy
+
+
+CURSO AWS:
+
+
+
+MÓDULO 2:
+¿qué es la arquitectura en la nube? La arquitectura en la 
+nube es la práctica de aplicar características de la nube a 
+una solución que usa servicios 
+y funciones de nube para satisfacer las necesidades técnicas de 
+una organización y los casos prácticos empresariales. Una solución es 
+similar a un plano de un edificio.Los sistemas de software requieren que 
+los arquitectos administren su tamaño y complejidad. Arquitectos de nube:
+•Interactúan con los responsables de la toma de decisiones para identificar 
+Los objetivos de negocios y las capacidades que necesitan mejorar. 
+•Se aseguran de que haya una alineación entre las entregas de tecnología de una 
+solución y los objetivos de negocio.•Trabajan con los equipos de entrega que están 
+implementando la solución para asegurarse de que las funciones tecnológicas 
+sean adecuadas. Los sistemas con una buena arquitectura aumentan las 
+probabilidades de que las entregas de tecnología ayuden a satisfacer los 
+objetivos de negocio.
+
+
+La arquitectura en la nube es la práctica de aplicar características de la nube a una solución que usa servicios y funciones de nube para satisfacer las necesidades 
+técnicas de una organización y los casos prácticos empresariales
+•Puede usar los servicios de AWS para crear arquitecturas altamente disponibles, que sean escalables y 
+fiablesLos puntos clave de esta sección del módulo incluyen:
+•La arquitectura en la nube es la práctica de aplicar características de la nube a una solución que usa servicios y 
+funciones de nube para satisfacer las necesidades técnicas de una organización y los casos prácticos empresariales
+•Puede usar los servicios de AWS para crear arquitecturas 
+altamente disponibles, que sean escalables y fiablesAWS Training and Certification Módulo 2:
+
+
+El Marco de AWS Well-Architected es una guía que ofrece un enfoque coherente para evaluar las arquitecturas de la nube y orientación para ayudar a implementar diseños. 
+Documenta una serie de preguntas básicas y prácticas recomendadas que le permiten comprender si una arquitectura determinada está bien alineada con las prácticas recomendadas de la nube. 
+AWS desarrolló este marco tras revisar las arquitecturas de miles de clientes en AWS.El Marco de AWS Well-Architected se organiza enseis pilares: excelencia operativa, 
+seguridad, fiabilidad, eficacia del rendimiento, optimización de costos y sostenibilidad. Los primeros cinco pilares han sido parte del marco desde 
+la introducción del marco el año 2015. El pilar de sostenibilidad se agregó como el sexto pilar el año 2021 para ayudar a las organizaciones a aprender a minimizar el impacto ambiental 
+de ejecutar cargas de trabajo en la nube.AWS Training and Certification Módulo 2: Presentación de la arquitectura en la nube.
+
+Cuando considere el rendimiento, es deseable maximizar su rendimiento mediante el uso eficiente de recursos de computación. También es deseable que mantenga esa eficiencia a 
+medida que cambie la demanda.Igualmente, es importante democratizar las tecnologías avanzadas. En situaciones en las que le resulte difícil implementar la tecnología usted mismo, 
+considere recurrir a un proveedor. Al implementar la tecnología por usted, el proveedor se hace cargo de la complejidad y el conocimiento, con lo que libera a su equipo 
+para concentrarse en trabajo de más valor agregado.La compatibilidad mecánicaocurre cuando utiliza una herramienta o un sistema con conocimientos sobre cómo funciona mejor. 
+Utilice el enfoque tecnológico que se adapte mejor a lo que intenta lograr. Por ejemplo, tenga en cuenta los patrones de acceso a los datos cuando seleccione los enfoques de 
+base de datos o de almacenamiento.Para obtener más información sobre las prácticas recomendadas de rendimiento, consulte el documento técnico sobre la eficiencia del rendimiento.
+
+El pilar de fiabilidad aborda la capacidad de un sistema para recuperarse de errores en la infraestructura o interrupciones de servicio y adquirir de manera dinámica 
+recursos de cómputo para satisfacer la demanda. También aborda la capacidad de un sistema para mitigar las interrupciones como errores de configuración o problemas 
+transitorios de la red. Puede ser difícil asegurar la fiabilidad en un entorno tradicional. Los problemas surgen de puntos únicos de error, la falta de automatización y 
+la falta de elasticidad. Al aplicar las prácticas recomendadas descritas en el pilar de fiabilidad, puede prevenir muchos de estos problemas. Le servirá de ayuda a usted y 
+sus clientes tener una arquitectura diseñada adecuadamente con respecto a la alta disponibilidad, la tolerancia a errores y la redundancia general.Para obtener más información 
+sobre las prácticas recomendadas de fiabilidad, consulte el documento técnico sobre el pilar de fiabilidad.
+
+
+La optimización de costos es un requisito permanente de cualquier buen diseño de arquitectura. El proceso es iterativo y debe perfeccionarse y mejorarse a lo largo 
+del ciclo de vida de producción. Comprender el grado de eficiencia de su arquitectura actual en relación con sus objetivos puede eliminar gastos innecesarios. 
+Considere usar servicios administrados, porque operan a escala de la nube y pueden ofrecer un menor costo por transacción o servicio.Para obtener más información, 
+consulte el documento técnico sobre optimización de costos.
+
+El pilar de sostenibilidad aborda la capacidad para crear arquitecturas que maximicen la eficiencia y reduzcan el desperdicio.La sostenibilidad en la nube es un esfuerzo continuo 
+centrado principalmente en la reducción y eficiencia energéticas en todos los componentes de una carga de trabajo al lograr el máximo beneficio de los recursos aprovisionados y 
+minimizar los recursos totales requeridos. Este esfuerzo puede incluir lo siguiente: selección inicial de un lenguaje de programación eficiente, adopción de algoritmos modernos, 
+uso de técnicas de almacenamiento de datos eficiente, implementación de infraestructura de cómputo eficiente y del tamaño adecuado, y reducción al mínimo de requisitos de hardware 
+para usuario final de alta potencia.Para obtener más información sobre los principios de diseño de sostenibilidad en la nube, consulte el documento técnico Sustainability Pillar: 
+AWS Well-Architected Framework(Pilar de sostenibilidad: Marco de AWS Well-Architected) en 
+https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html
+
+La Herramienta de AWS Well-Architected:
+
+Ayuda a revisar el estado de las cargas de trabajo y las compara con las prácticas recomendadas más recientes de AWS en el ámbito de la arquitectura.
+•Le permite acceder a los conocimientos y a las prácticas recomendadas que utilizan los arquitectos de AWS, cuando lo necesite.
+•Proporciona un plan de acción con una orientación paso a paso sobre cómo crear mejores cargas de trabajo para la nube.
+•Proporciona un proceso coherente para que revise y mida sus arquitecturas en la nube.
+
+A medida que diseña una solución, piense detenidamente en las compensaciones para que pueda seleccionar un enfoque óptimo. Por ejemplo, podría cambiar la consistencia, 
+la durabilidad y el espacio por el tiempo y la latencia para ofrecer un rendimiento más alto. O bien, podría priorizar la velocidad de comercialización por sobre el costo.
+Las compensaciones pueden aumentar el costo y la complejidad de su arquitectura, por lo que las decisiones de diseño deben basarse en datos empíricos. Por ejemplo, 
+podría tener que realizar pruebas de carga para asegurarse de obtener un beneficio medible del rendimiento. O bien, podría tener que realizar análisis comparativos para lograr, 
+con el tiempo, la carga de trabajo con los mejores costos. Cuando evalúe las mejoras relacionadas con el rendimiento, también es deseable que considere de qué manera sus elecciones 
+de diseño de arquitectura afectarán a sus clientes y las eficiencias de las cargas de trabajo. En esta sección, conocerá las prácticas recomendadas para el diseño de soluciones en AWS. 
+También conocerá las prácticas no recomendadas (o los malos diseños de soluciones) que debe evitar.
+
+
+Cuando ejecuta sus cargas de trabajo en la nube de AWS, puede escalar su infraestructura con rapidez y de manera proactiva. 
+Asegúrese de implementar la escalabilidad en cada capa de su infraestructura.Para comprender la importancia de la escalabilidad, 
+considere estas prácticas no recomendadas, donde el escalado se hace de manera reactiva y manual. En esta situación, cuando los servidores de aplicaciones alcanzan su capacidad total, 
+se impide a los usuarios acceder a la aplicación. Luego, los administradores lanzarán manualmente una o más instancias nuevas para administrar la carga. 
+Lamentablemente, se requieren algunos minutos para que la instancia esté disponible para uso después de lanzarla. Eso aumenta el tiempo en que los usuarios no pueden acceder 
+a la aplicación.
+
+Cuando se activa una alarma, Amazon EC2 Auto Scaling lanza de inmediato una nueva instancia. De este modo, esa instancia está lista antes de que se alcance el máximo de la capacidad, 
+lo que ofrece una experiencia sin interrupciones para los usuarios.Idealmente, también debe diseñar su sistema para que haga una reducción horizontalcuando la demanda disminuya y usted 
+no ejecute (y pague) instancias que ya no necesita.©2022, Amazon Web Services, Inc. o sus filiales. Todos los derechos reservados.241. Habilite la escalabilidad (2 de 2)
+Asegúrese de que su arquitectura pueda manejar los cambios en la demanda.Práctica recomendadaServidores de aplicaciones en el umbral de alarmaAmazon EC2 Auto Scaling recibe la alerta 
+y escala horizontalmenteEl nuevo servidor está listo antes de que se alcance la capacidad totalLos usuarios nunca experimentan una interrupción del servicioAWS Training and 
+Certification Módulo 2: Presentación de la arquitectura en la nube.
+
+Las infraestructuras tradicionales se basan en cadenas de servidores estrechamente integrados, cada uno con un propósito específico. El problema es que cuando uno de esos componentes o 
+capas deja de funcionar, la interrupción del sistema puede ser crítica. También impide el escalado. Si agrega o quita servidores en una capa, también debe conectar todos los servidores 
+de cada capa de conexión. El ejemplo de la izquierda muestra un conjunto de servidores web y de aplicaciones que están estrechamente acoplados. Si un servidor de aplicaciones deja de 
+funcionar, se producirá un error porque los servidores web intentarán conectarse a él sin éxito.Con el acoplamiento débil, utiliza soluciones administradas como intermediarios entre 
+las capas de su sistema. Con este diseño, el intermediario automáticamente maneja ambos errores y el escalado de los componentes o las capas. El ejemplo de la derecha muestra un 
+equilibrador de carga (en este caso, un equilibrador de carga de Elastic Load Balancing) que enruta las solicitudes entre los servidores web y los servidores de aplicaciones. 
+Si un servidor de aplicaciones deja de funcionar, el equilibrador de carga automáticamente comenzará a dirigir todo el tráfico a los dos servidores en buen estado.Dos soluciones 
+primarias para desacoplar los componentes son los equilibradores de cargay las colas de mensajes.
+
+
+
+La siguiente práctica recomendada es diseñar servicios, no servidores. Aunque Amazon Elastic Compute Cloud (Amazon EC2) ofrece una enorme flexibilidad para diseñar y configurar 
+su solución, no siempre debe ser la primera (o la única) solución que utiliza para cada necesidad. En algunos casos, los contenedores o una solución sin servidor podrían ser más adecuados. 
+Por lo tanto, es importante considerar que cuáles son sus necesidades y cuál solución es adecuada.Con las soluciones sin servidor y los servicios administrados de AWS, 
+no se necesita aprovisionar, configurar y administrar toda una instancia de Amazon EC2. Las soluciones administradas que tienen un perfil más bajo y un mejor rendimiento pueden reemplazar 
+las soluciones basadas en servidor por un menor costo. Algunos ejemplos son AWS Lambda, Amazon Simple Queue Service (Amazon SQS), Amazon DynamoDB, Elastic Load Balancing, Amazon Simple 
+Email Service (Amazon SES) y Amazon Cognito.
+
+
+Cuando sea posible, elimine los puntos únicos de error de su arquitectura. Esto no quiere decir que no debe duplicar siempre cada componente. 
+Dependiendo de sus acuerdos de nivel de servicio (SLA, Service-Level Agreement) de tiempo de inactividad, puede usar soluciones automatizadas que solo inician 
+componentes cuando es necesario. También puede usar un servicio administrado, donde AWS reemplaza de automáticamente el hardware defectuoso subyacente por usted.
+Este sistema simple muestra dos servidores de aplicaciones conectados a un único servidor de base de datos. El servidor de base de datos representa un punto único de error y 
+se debe evitar. Cuando deja de funcionar, los servidores de aplicaciones también dejan de hacerlo. Los servidores de aplicaciones deben seguir funcionando incluso en caso de falla, 
+eliminación o sustitución del hardware físico subyacente.
+
+
+Una forma común de evitar los puntos únicos de error es crear un servidor de base de datos secundario (en espera) y replicar los datos. De este modo, 
+si el servidor de base de datos principal se desconecta, el servidor secundario puede asumir la carga. En este ejemplo, cuando la base de datos principal se desconecta, 
+los servidores de aplicaciones envían automáticamente sus solicitudes a la base de datos secundaria. Este ejemplo también ilustra la práctica recomendada 3: trate los 
+recursos como desechables y diseñe sus aplicaciones para que admitan cambios en el hardware.
+
+El cómputo en la nube le permite cambiar los gastos de capital por los gastos variables. Los gastos de capital (CapEx)son fondos que utiliza una empresa para adquirir, 
+actualizar y mantener activos físicos como bienes, edificios industriales o equipos. Según este modelo, usted paga por los servidores en el centro de datos, 
+estén o no activos. Por el contrario,los servicios de AWS usan un modelo de costos de gastos variables, lo que significa que solo paga por los servicios individuales que necesita, 
+por el tiempo que los utilice. En cada servicio, puede optimizar el costo. Muchos servicios ofrecen diferentes niveles de precios, modelos o configuraciones.Tenga en 
+cuenta que puede ser muy costoso replicar una configuración de centro de datos en las instalaciones de servidores que se ejecutan 24x7 en la nube. Por lo tanto, la mejor manera 
+de construir su infraestructura, desde la perspectiva del costo, es aprovisionar únicamente los recursos que necesita y detener los servicios cuando no se utilicen.
+
+
+El almacenamiento en cachées una técnica para hacer futuras solicitudes con más rapidez y reducir el rendimiento de la red almacenando 
+temporalmente los datos en una ubicación intermedia entre el solicitante y el almacenamiento permanente.En el ejemplo de prácticas no recomendadas, 
+no se utilizó ningún servicio de almacenamiento en caché. Cuando alguien solicita un archivos de uno de los buckets de Amazon Simple Storage Service (Amazon S3), 
+cada solicitud tarda la misma cantidad de tiempo en completarse y cada solicitud tiene el mismo costo.En el ejemplo de prácticas recomendadas, la infraestructura usa Amazon 
+CloudFront antes de Amazon S3 para ofrecer almacenamiento en caché. En esta situación, la solicitud inicial busca el archivo en Amazon CloudFront. Si no lo encuentra, CloudFront 
+solicita el archivo a Amazon S3. Después, CloudFront almacena una copia del archivo en una ubicación perimetral cerca del usuario y envía una copia al usuario que hizo la solicitud. 
+Las solicitudes posteriores del archivo se recuperan desde la (ahora más cercana) ubicación perimetral en CloudFront en lugar de Amazon S3. Esto reduce la latencia yel costo porque, 
+después de la primera solicitud, ya no debe pagar por la transferencia del archivo desde Amazon S3.©2022, Amazon Web Services, Inc. o sus filiales. Todos los derechos reservados.339. 
+Use el almacenamiento en cachéEl almacenamiento en caché minimiza las operaciones de recuperación de datos redundantes, lo que mejora el rendimiento y el costo.Práctica 
+no recomendadaTres solicitudes de latencia y costo iguales.Bucketde S3 con datosPráctica recomendadaLa segunda, 
+tercera y enésima solicitudes tienen menores latencia y costo.Bucketde S3 con datosAlmacenamiento en caché con Amazon CloudFrontAWS Training and Certification Módulo 2: 
+Presentación de la arquitectura en la nube © 2023, Amazon Web Services, Inc. o sus empresas afiliadas. Todos los derechos reservados. 36
+
+La infraestructura de la nube de AWS se basa en regiones. AWS cuenta con 22regiones en todo el mundo. Una región de AWS es una ubicación geográfica 
+física con dos o más zonas de disponibilidad. Las zonas de disponibilidad, a su vez, constan de uno o más centros de datos.Las regiones de AWS están conectadas con varios proveedores 
+de servicios de Internet (ISP, Internet Service Provider). Las regiones también están conectadas a una red troncal global privada, que proporciona un menor costo y una mayor 
+uniformidad en la latencia de red entre regiones en comparación con la Internet pública.Las regiones de AWS que se establecieron antes del 20de marzo de2019 están habilitadasde forma 
+predeterminada. Las regiones que se establecieron después del 20de marzo de2019, como Asia-Pacífico (Hong Kong) y Medio Oriente (Baréin), están deshabilitadasde forma predeterminada. 
+Debe habilitar estas regiones para poder usarlas. Puede utilizar la Consola de administración de AWS para habilitar o deshabilitar una región. Algunas regiones tienen acceso restringido. 
+Una cuenta de AWS (China) solo proporciona acceso a las regiones de Pekín y Ningxia. Para obtener más información sobre AWS en China, consulte la página de AWS en China. La región aislada 
+AWS GovCloud (EE.UU.) está diseñada para permitir a los organismos gubernamentales y a los clientes de EE.UU. transferir a la nube cargas de trabajo confidenciales y cumplir 
+con sus requisitos normativos y de cumplimiento específicos. Para obtener tolerancia a errores y estabilidad, las regiones están aisladas unas de otras. Los recursos en una región 
+no se replican automáticamente en otras regiones. Cuando almacena datos en una región específica, 
+no se replica fuera de esa región. Si las necesidades del negocio así lo requieren, es su responsabilidad replicar los datos en las regiones. AWS ofrece información sobre el país 
+y, si corresponde, sobre el estado donde reside cada región. Usted es responsable de seleccionar la región donde debe almacenar los datos, en función de los requisitos de cumplimiento 
+y latencia de red.
+
+Cada región de AWS tiene dos o más ubicaciones aisladas, conocidas como zonas de disponibilidad. Cada zona de disponibilidad abarca uno o más centros de datos, 
+con algunas zonas de disponibilidad que tienen hasta seis centros de datos. Sin embargo, ningún centro de datos puede ser parte de dos zonas de disponibilidad.
+Cada zona de disponibilidad está diseñada para constituir una zona de error independiente. Eso significa que las zonas de disponibilidad se encuentran separadas 
+físicamente dentro de una región metropolitana típica. También se encuentran en llanuras con menor riesgo de inundación (la clasificación específica de las zonas de 
+inundación varía según la región). Además de tener un suministro eléctrico ininterrumpido discreto e instalaciones de generación de energía de respaldo en el lugar, 
+la alimentación proviene de redes eléctricas diferentes de empresas independientes de servicios públicos para reducir aún más los puntos únicos de error. Las zonas de 
+disponibilidad están conectadas de forma redundante a varios proveedores de tránsito de nivel1.Una zona de disponibilidad es el nivel más granular de especificación que 
+se puede hacer para algunos servicios, como Amazon EC2.Usted es responsable de seleccionar las zonas de disponibilidad donde se encontrarán los sistemas. Los sistemas pueden 
+abarcar varias zonas de disponibilidad. Debe diseñar los sistemas para que sobrevivan a un error temporal o prolongado de una zona de disponibilidad si ocurre un desastre. 
+La distribución 
+de las aplicaciones en varias zonas de disponibilidad les permite mantenerse resistentes en la mayoría de las situaciones de error, incluidos los desastres naturales o errores de sistema.
+
+
+La base de la infraestructura de AWS son los centros de datos. Usted no especifica un centro de datos para la implementación de recursos. 
+Sin embargo, un centro de datos es la ubicación donde residen los datos reales. Amazon opera centros de datos de vanguardia de alta disponibilidad. 
+Aunque es poco frecuente, pueden ocurrir fallas que afecten la disponibilidad de las instancias que están en la misma ubicación. 
+Si aloja todas las instancias en una misma ubicación y se produce una falla en ella, ninguna de las instancias estará disponible.
+Todos los centros de datos se encuentran en línea y a disposición de los clientes. Si se produce un error, los procesos automatizados redirigen el tráfico de datos 
+de los clientes fuera del área afectada. Las aplicaciones principales se implementan en una configuración N+1, de modo que, si se produce un error en un centro de datos, 
+hay suficiente capacidad para poder equilibrar la carga del tráfico hacia los sitios restantes.AWS utiliza equipos de red personalizados provenientes de varios original 
+device manufacturers (ODM, fabricantes de dispositivos originales). Los ODM diseñan y fabrican productos en función de las especificaciones de una segunda empresa. Luego, 
+la segunda empresa cambia la marca de los productos para la venta.
+
+
+Para entregar contenido a los usuarios finales con menor latencia, Amazon CloudFront utiliza una red global que incluye más de 200puntos de presencia que se componen de ubicaciones 
+perimetrales y cachés perimetrales regionales. Las ubicaciones perimetrales se encuentran en América del Norte, Europa, Asia, Australia, América del Sur, el Medio Oriente, África y China. 
+Las ubicaciones perimetrales admiten servicios de AWS, como AmazonRoute 53 y AmazonCloudFront.Las cachés perimetrales regionales se utilizan de forma con Amazon CloudFront. 
+Se utilizan cuando tiene contenido al que no se accede con la frecuencia suficiente para que permanezca en una ubicación perimetral. Las cachés perimetrales 
+regionales absorben este contenido y proporcionan una alternativa a recuperar ese contenido del servidor de origen.Para obtener más información sobre la infraestructura 
+de Amazon CloudFront, consulte lainfraestructura de 
+Amazon CloudFront infrastructureenhttps://aws.amazon.com/cloudfront/features/?whats-new-cloudfront.sort-by=item.additionalFields.postDateTime&whats-new-cloudfront.sort-order=desc#Amazon_CloudFront_InfrastructureAWS 
+Training and Certification Módulo 2: Presentación de la arquitectura en la nube © 2023, Amazon Web Services, Inc. o sus empresas afiliadas. Todos los derechos reservados. 46 
+
+
+Los puntos clave de esta sección del módulo incluyen:
+•La infraestructura global de AWS consta de regiones y zonas de disponibilidad
+•La elección de una región suele basarse en los requisitos de cumplimiento o en reducir la latencia
+•Cada zona de disponibilidad se encuentra separada de forma física de otras zonas de disponibilidad y tiene alimentación, redes y conectividad redundantes
+•Las ubicaciones perimetrales y las cachés perimetrales regionales mejoran el rendimiento al almacenar en caché el contenido más 
+cerca de los usuariosAWS Training and Certification Módulo 2: 
+Presentación de la arquitectura en la nube © 2023, Amazon Web Services, Inc. o sus empresas afiliadas. Todos los derechos reservados. 47 
+
+
+MÓDULO 3:
+
+Amazon S3 es un servicio de almacenamiento de objetos. Le permite almacenar cantidades casi ilimitadas de datos. Los archivos de datos se almacenan como objetos. 
+Coloca los objetos en un bucket, que usted define. Cada bucketdebe tener un nombre que sea globalmente único entre las regiones. 
+Esto significa que el nombre del buckettiene que ser único entre todas las cuentas de clientes de AWS. Los objetos que almacena pueden cariar de tamaño de 0bytes a 5TB. 
+Aunque los objetos individuales no pueden superar los 5TB, puede almacenar la cantidad total de datos que necesite.Cada objeto tiene cinco características consistentes. Primero, 
+tiene una clave, que es el nombre que le asigna a un objeto. La clave del objeto se usa para recuperar el objeto. En la Consola de administración de AWS, puede crear un directorio 
+dentro de un buckety cargar un objeto en ese directorio. Sin embargo, en la realidad, Amazon S3 no conoce los directorios, por lo que el valor de clave incluye la ruta completa a 
+la raíz del bucket. Los objetos también incluyen un ID de versión. En un bucket, una clave y un ID de versión identifican un objeto de forma única. Aprenderá más sobre el control 
+de versiones más adelante en este módulo.El valor del objeto es el contenido real que almacena. Puede ser una secuencia de bytes. Los valores del objeto son inmutables, es decir 
+que después de que carga un objeto, no puede modificar el valor. Si desea modificar el objeto, debe hacer un cambio.
+fuera de Amazon S3 y volver a cargar el objeto.Los objetos también incluyen metadatos, que es un conjunto de pares de nombre-valor que puede usar para almacenar 
+información sobre el objeto. Puede asignar metadatos, los que se denominan metadatos definidos por el usuario, a sus objetos en Amazon S3. 
+Amazon S3 también asigna metadatos del sistema a estos objetos, que utiliza para administrar objetos. Por último, Amazon S3 también usa subrecursospara almacenar información adicional 
+específica del objeto.8AWS Training and Certification Módulo 3: Incorporación de una capa de almacenamiento © 2023, Amazon Web Services, Inc. o sus empresas afiliadas. 
+Todos los derechos reservados. 13 
+
+Amazon S3 ofrece muchas funciones que lo hacen un componente importante de muchas soluciones creadas en AWS.En primer lugar, ofrece durabilidad, que describe el promedio de la 
+pérdida anual prevista de objetos. Once nueves de durabilidad significa que cada año, hay un 0,000000001 por ciento de 
+probabilidad de perder un objeto. Por ejemplo, si almacena 10000 objetos con Amazon S3, puede esperar una pérdida de un solo objeto cada 10000000 años en promedio. 
+Amazon S3 almacena de forma redundante sus objetos en varios dispositivos en múltiples instalaciones en la región de Amazon S3 que designe. 
+Amazon S3 está diseñado para sostener errores de dispositivos simultáneos detectando con rapidez y reparando cualquier redundancia perdida. 
+Amazon S3 también verifica con regularidad la integridad de sus datos mediante sumas de verificación.Amazon S3 también ofrece cuatro nueves (o 99,99 por ciento) 
+de disponibilidad. La disponibilidad se refiere a su capacidad de acceder a los datos con rapidez, cuando lo desee. También ofrece una capacidad casi ilimitada 
+para almacenar sus datos, por lo que es escalable. Amazon S3 tiene una configuración de seguridadrobusta. Ofrece muchas maneras de controlar 
+el acceso a los datos que almacena y también le permite cifrar los datos.
+
+Por último, Amazon S3 tiene un alto rendimiento, con una latencia hasta el primer byte que se mide en milisegundos para la mayoría de las clases de almacenamiento. 
+Para obtener más información sobre los patrones de diseño de rendimiento de S3, consulte la documentación de Amazon S3. Los enfoques comunes incluyen usar el almacenamiento en 
+caché para contenido de acceso frecuente; lógica configurable de reintentos y tiempo de espera para objetos que reciben un significativo tráfico de solicitudes en un período breve; 
+y escalado horizontal y paralelización de solicitudes para obtener un alto rendimiento en toda la red.
+
+
+Una situación de uso común de Amazon S3 es utilizarlo para el alojamiento de medios. En este caso práctico, Amazon S3 se usa para almacenar y distribuir videos, fotos, 
+archivos de música y otros medios. Este contenido se puede entregar directamente desde Amazon S3 porque cada objeto en Amazon S3 tiene una URL HTTP única. Como alternativa, 
+Amazon S3 puede actuar como un almacén de origen para una red de entrega de contenido (CDN), como Amazon CloudFront. La elasticidad de Amazon S3 lo hace ideal para alojar 
+contenido web que necesita ancho de banda para dar respuesta a los picos extremos de demanda. Además, como no necesita aprovisionar almacenamiento para Amazon S3, 
+funciona bien para sitios web de rápido crecimiento que alojan contenido de uso intensivo de datos generado por el usuario, como sitios de uso compartido de videos o fotos.
+AWS Training and Certification Módulo 3: Incorporación de una capa de almacenamiento © 2023, Amazon Web Services, Inc. o sus empresas afiliadas. Todos los derechos reservados. 17 
+
+
+
+De forma predeterminada, todos los bucketsde S3 son privados y solo pueden acceder a ellos los usuarios a los que se ha concedido acceso explícitamente. 
+Es esencial que administre y controle el acceso a los datos de Amazon S3. AWS ofrece muchas herramientas y opciones para controlar el 
+acceso a sus bucketsde S3 u objetos, como:•Usar el bloqueo del acceso público de Amazon S3. Esta configuración anula otras políticas o permisos de objetos. 
+Habilite el bloqueo del acceso público para todos los bucketsque no desee que sean de acceso público. Esta función ofrece un método sencillo de evitar la 
+exposición no intencional de datos de Amazon S3.•Escribir políticas de AWS Identityand Access Management (AWS IAM) que especifiquen los usuarios o roles 
+que pueden acceder a bucketsy objetos específicos. •Escribir políticas de bucketque definan el acceso a bucketsu objetos específicos. Esta opción se usa 
+habitualmente cuando el usuario o sistema no puede autenticarse mediante IAM. Se pueden configurar políticas de bucketpara otorgar acceso entre cuentas de 
+AWS o para otorgar acceso público o anónimo a los datos de Amazon S3. Si se usan políticas de bucket, deben escribirse con cuidado y probarse completamente. 
+Puede especificar un enunciado de denegación en una política de bucketpara restringir el acceso. El acceso se restringirá incluso si los usuarios tienen 
+permisos que se otorgan en una política basada en identidad adjunta a los usuarios.•Crear puntos de acceso de S3. Los puntos de acceso son nombres de host 
+únicos que aplican permisos y controles de red distintos para solicitudes que se realizan a través de esos puntos. Los clientes con conjuntos de datos compartidos 
+pueden escalar el acceso para muchas aplicaciones creando puntos de acceso individualizados con
+nombres y permisos personalizados para cada aplicación. •Configurar listas de control de acceso (ACL) en sus bucketsy objetos. Las ACL se usan con menos frecuencia 
+(las ACL son anteriores a IAM). Si usa ACL, no configure un acceso que sea demasiado abierto o permisivo.•AWS TrustedAdvisorofrece una función de comprobación de permisos de bucket. 
+Es una herramienta útil para descubrir si cualquiera de los bucketsen su cuenta tiene permisos que otorgan acceso global.
+
+Hay tres enfoques generales diferentes para configurar el acceso a los objetos en un bucketde S3.La situación de la izquierda muestra la configuración de seguridad 
+predeterminada de Amazon S3. De forma predeterminada, los bucketsde Amazon S3 y los objetos almacenados en ellos son privados (están protegidos). 
+Las únicas entidades con acceso a un bucketrecién creado sin modificar son el administrador de la cuenta y el usuario raíz de la cuenta de AWS.
+El propietario del recurso puede otorgar permisos de acceso específicos a otros, pero a quienes no se les hayan concedido esos permisos no tendrán acceso.
+La situación del medio muestra una ocasión en que se ha desactivado la configuración de seguridad de S3 y cualquiera puede acceder públicamente a los objetos almacenados en el bucket. 
+¡Precaución! Usar un bucketde Amazon S3 para alojar un sitio web estático es un ejemplo de cómo configurar una arquitectura de AWS rápidamente. Sin embargo, 
+para la mayoría de los casos prácticos de Amazon S3, no es recomendable otorgar acceso público a Amazon S3.En la mayoría de los casos prácticos, 
+no se requiere acceso público.Con más frecuencia, Amazon S3 se usa para almacenar datos utilizados por una aplicación que se ejecuta fuera de Amazon S3, 
+o para respaldar información confidencial. Para estos casos prácticos comunes, nunca se debe otorgar acceso público a los bucketsque contienen los datos.
+
+La situación de la derecha muestra un caso en que se configuró Amazon S3 para proporcionar acceso controlado. Al Usuario A se le otorgó acceso a los objetos en el bucket, 
+pero al Usuario B se le denegó el acceso. Las situaciones de acceso controlado son frecuentes. Las puede configurar el propietario del bucketmediante una o más de las herramientas 
+o las opciones para controlar el acceso a los datos de Amazon S3 que se analizaron anteriormente en este módulo
+
+Cuando configura la opción de cifrado Predeterminado de un bucket, se habilita el cifrado del lado del servidor. Con esta función, Amazon S3 cifra su objeto antes de guardarlo en el disco.
+ Luego, Amazon S3 los descifrará cuando usted descargue el objeto. El cifrado del cliente es la otra opción. Cuando usa este enfoque, 
+cifra los datos en el lado del cliente antes de cargarlo en Amazon S3. En este caso, administra el proceso de cifrado, las claves de cifrado y las herramientas relacionadas. 
+Al igual que el cifrado del lado del servidor, el cifrado del cliente puede reducir el riesgo cifrando los datos con una clave que se almacena en un mecanismo diferente que 
+el mecanismo que almacena los datos en sí.
+
+Un segundo caso práctico de Amazon S3 es utilizar el servicio para alojar un sitio web estático. En un sitio web estático, las páginas web individuales incluyen contenido estático. 
+También pueden incluir scripts del lado del cliente. Por el contrario, un sitio web dinámicodepende del procesamiento del lado del servidor, 
+que podría implicar consultas de la base de datos que se ejecutan en respuesta a los scripts del lado del servidor, como PHP, JSP o ASP.NET. 
+AmazonS3 no admite con el scripting del lado del servidor. Sin embargo, AWS ofrece otros servicios que le permiten alojar sitios web dinámicos.
+Para alojar un sitio web estático, configure un bucketde S3 para alojamiento de sitios web. Luego, cargue el contenido de su sitio web en el bucket. 
+El ejemplo muestra que el sitio estático podría consistir en archivos HTML, imágenes, videos y scripts del cliente en formatos como JavaScript.
+Con este enfoque, no necesita ejecutar una máquina virtual que aloje un servidor web. De hecho, no necesita ejecutar un servidor. Sin embargo, igualmente puede alojar un sitio web. 
+Amazon S3 proporciona una solución de bajo costo para alojamiento web que incluye alto rendimiento, escalabilidad y disponibilidad.
+
+El uso compartido de recursos entre orígenes (CORS) define una forma para que las aplicaciones web del cliente que están cargadas en un dominio interactúen con los recursos en un 
+dominio distinto. Con el respaldo de CORS, puede crear aplicaciones web del lado del cliente completas con AmazonS3. Asimismo, puede permitir un acceso entre orígenes 
+a sus recursos de AmazonS3 de manera selectiva.Para configurar el bucketde modo que permita solicitudes entre orígenes, cree una configuración CORS. Una configuración CORS 
+es un documento XML con reglas que identifican: •Los orígenes a los que les permitirá acceder a su bucket.•Las operaciones (métodos HTTP) que admitirán a cada origen: En este ejemplo, 
+se permiten las solicitudes PUT, POST y DELETE desde el origenhttp://www.example.com,que se podría configurar con Amazon Route53 para que sea otro bucketde S3.
+•Otra información específica de operaciones.Para obtener más información sobre CORS, consulte la documentación de AWS sobre el uso compartido de recursos entre orígenes (CORS)
+.AWS Training and Certification Módulo 3: Incorporación de una capa de almacenamiento © 2023, Amazon Web Services, Inc. o sus empresas afiliadas. Todos los derechos reservados. 26 
+
+
+Con Amazon S3, paga solo por lo que utiliza. No hay una tarifa mínima. Hay cuatro componentes de costo que debe considerar 
+cuando decida cuál clase de almacenamiento de Amazon S3 se ajusta mejor a su perfil de datos: precio del almacenamiento, precio de las solicitudes 
+y la recuperación de datos, precio de la transferencia de datos y la aceleración de transferencias, y precio de las funciones de administración de datos.
+Puede encontrar más información sobre los precios de Amazon S3 en Precios de Amazon S3.AWS Training and Certification Módulo 3: Incorporación de una capa de 
+almacenamiento © 2023, Amazon Web Services, Inc. o sus empresas afiliadas. Todos los derechos reservados. 40 
+
+
+AWS ofrece varias opciones de informática para satisfacer diferentes necesidades. 
+Mientras diseña la arquitectura para admitir un tipo determinado de carga de trabajo, es importante que comprenda las opciones de informática disponibles. 
+Como se muestra en el diagrama, las opciones clave de informática de tiempo de ejecución se pueden agrupar en cuatro categorías de modelos 
+informáticos en la nube: máquinas virtuales (VM); contenedores ;plataforma como servicio, que también se conoce como PaaS; y sin servidor. 
+Además, puede utilizar soluciones especializadas para abordar los casos de uso de informática específicos.En la categoría máquinas virtuales, 
+AWS ofrece dosservicios principales. El primer servicio es Amazon ElasticCompute Cloud (Amazon EC2).Proporciona servidores virtuales seguros y de tamaño ajustable en la nube.
+ El segundo servicio es Amazon Lightsail. Proporciona servidores privados virtuales para ejecutar cargas de trabajo sencillas de forma rentable. 
+En la categoría contenedores, AWS ofrece Amazon ElasticContainerService(Amazon ECS). Le permite ejecutar aplicaciones de contenedores de Dockeren AWS.En la categoría 
+PaaSse incluye AWS ElasticBeanstalk. Es una solución que ejecuta aplicaciones web y servicios que se desarrollan en lenguajes como Java, .NET, PHP, Node.js, Python, Ruby, 
+Goy Docker.
+
+
+En la categoría sin servidorse incluye AWSLambda, que es una solución informática sin servidor que ejecuta los códigos de Java, Go, PowerShell, Node.js, C#, Python o Ruby. 
+En esta categoría también se incluye AWS Fargate, que proporciona una plataforma de informática sin servidor para contenedores.En cuanto a las soluciones especializadas, AWS 
+Outpostsofrece una forma de ejecutar la infraestructura y los servicios de AWS en las instalaciones, y AWS Batchesun servicio que ejecuta trabajos por lotes a cualquier escala.
+Cuando seleccione un tiempo de ejecución de informática de AWS para su carga de trabajo, tenga en cuenta que las máquinas virtuales y los servicios basados en contenedores 
+proporcionan un mayor control sobre su infraestructura y permiten mayores grados de personalización. PaaSy los servicios sin servidor le permiten enfocarse más en la aplicación y 
+menos en la infraestructura. También permiten una implementación rápida. Los servicios de la categoría de soluciones especializadas abordan tipos específicos de cargas de trabajo, 
+o nube híbrida y lote. Estos servicios especializados funcionan bien para estos casos de uso, ya que AWS también los administra completamente. En este módulo, el enfoque estará en 
+Amazon EC2.Formación y certificación de AWSMódulo 4: Incorporación de una capa informática© 2021 Amazon Web Services, Inc. o sus filiales Todos los derechos reservados.13
+
+Amazon ElasticCompute Cloud (Amazon EC2) posibilita la informática en la nube. Puede utilizar Amazon EC2 para aprovisionar servidores virtuales y controlar completamente los recursos 
+informáticos de esos servidores. Puede obtener e iniciar instancias de servidor nuevas en cuestión de minutos. Puede escalar rápidamente la capacidad, ya sea aumentándola o reduciéndola, 
+en función de sus necesidades. Desde el punto de vista del costo, paga solo por la capacidad que utiliza.¿Por qué se denomina ElasticCompute Cloud?•Elastic(elástico) porque puede aumentar 
+o disminuir fácilmente la cantidad de servidores que ejecuta para admitir una aplicación de forma automática. También puede aumentar o disminuir el tamañode los servidores existentes
+•Compute(informática) porque la mayoría de los usuarios ejecutan servidores para alojar aplicaciones en ejecución o procesan datos, lo que requiere recursos de informática. 
+Estos recursos incluyen la capacidad de procesamiento (CPU) y la memoria (RAM)•Cloud(nube) porque las instancias EC2 que ejecuta se alojan en la nube
+
+
+Para aprovisionar una instancia EC2, debe tomar decisiones clave con respecto a los detalles de configuración. Los parámetros principales que debe especificar para lanzar una 
+instancia segura incluyen:•Imagen de Amazon Machine (AMI):una AMI define la configuración de software básica para una instancia y 
+Amazon EC2 la utiliza para lanzar la instancia.•Tipo de instancia:un tipo de instancia define una combinación de capacidad de CPU, memoria, almacenamiento y redes 
+que proporciona un cierto nivel de capacidad de cómputo para ejecutar una aplicación.•Selección de ubicación y direccionamiento de redes: cuando lanza una instancia, 
+puede especificar la ubicación y el direccionamiento de red adecuados para proporcionar el acceso a la red y la seguridad que desea.•Rol asumido:de forma opcional, 
+puede asociar un rol de AWS Identityand Access Management (IAM), que otorga permisos para acceder a los servicios de AWS a las aplicaciones que se ejecutan en la 
+instancia o a los usuarios conectados a la instancia.•Datos de usuario: puede inicializar o personalizar aún más la configuración de la instancia si especifica un 
+script de datos de usuario. Este script se ejecuta de forma automática cuando se lanza la instancia.
+
+Una AMI brinda la información necesaria para lanzar una instancia. Se debe especificar una AMI de origen cuando se lanza una instancia. La AMI incluye 
+una plantillapara el volumen raíz de la instancia, permisos de 
+lanzamientoy asignaciones de dispositivos de bloques.Un volumen raíz normalmente contiene un sistema operativo (SO) y todo lo que se ha instalado en ese sistema operativo 
+(las aplicaciones, las bibliotecas, las utilidades y más). Amazon EC2 copia la plantilla en el volumen raíz de la instancia nueva y, a continuación, la inicia.Los permisos de 
+lanzamientocontrolan qué cuentas de AWS puede usar la AMI para lanzar instancias. También le permiten poner la AMI a disposición del público.Las asignaciones de dispositivos de bloques 
+especifican volúmenes de almacenamiento adicionales (si los hay) para asociar a la instancia cuando se lanza.Cuando necesite varias instancias con la misma configuración, puede lanzarlas 
+desde una misma AMI.Cuando necesite instancias con distintas configuraciones, puede usar distintas AMI para lanzarlas. Por ejemplo, podría tener una AMI para implementar las instancias 
+del servidor web en su arquitectura y otra para implementar las instancias del servidor de aplicaciones.
+
+
+Usted crea una AMI desde una instancia EC2. Comienza con una AMI de origen, que puede ser una AMI que ya existe, como una AMI Quick Startproporcionada por AWS. O bien, 
+puede comenzar con una AMI que cree a partir de una máquina virtual que importe. A continuación, lanza una instancia EC2 a partir de esa AMI (paso 1).Independientemente de las 
+opciones que elija (paso 1), obtendrá lo que se denomina instancia no modificada en el diagrama. A partir de esa instancia, luego puede crear una instanciadorada. En otras palabras, 
+crear una máquina virtual con la configuración específica del SO y de la aplicación que desee (paso 2). Luego, regístrela como una AMI nueva (paso 3).En el caso de una AMI con respaldo 
+de EBS, puede registrar la AMI nueva creando una imagen nuevay AWS la registra automáticamente. En el caso de una AMI con respaldo de una instancia, puede registrar la AMI nueva mediante 
+las herramientas de AMI de Amazon EC2 para crear un paquetepara el volumen raíz de la instancia y cargar el paquete en un bucketde Amazon S3. Luego, debe registrar la AMI nueva de 
+forma manual.Una vez registrada la AMI, se puede utilizar para lanzar instancias nuevas en la misma región de AWS. Ahora puede considerar la AMI nueva como una AMI de inicio nueva. 
+Si lo desea, además puede copiar la AMI en otras regiones (paso 4) para que también pueda lanzar nuevas 
+instancias EC2 en esas ubicaciones.Formación y certificación de AWSMódulo 4: Incorporación de una capa informática© 2021 Amazon Web Services, Inc. o sus filiales Todos los 
+derechos reservados.30
+
+Otra forma de crear una AMI es utilizar EC2 ImageBuilder.EC2 ImageBuilder es un servicio de AWS que simplifica la creación, el mantenimiento, la validación, 
+el uso compartido y la implementación de imágenes de Linux o Microsoft Windows. Proporciona una interfaz gráfica sencilla para producir las AMI que se utilizarán en 
+AWS y generar las imágenes de máquinas virtuales que se utilizarán en las instalaciones.Una de las ventajas de utilizar EC2 ImageBuilder es que le permite crear imágenes con 
+los componentes esenciales solamente, lo que puede reducir la exposición a puntos vulnerables de seguridad. Antes de utilizar las imágenes en producción, puede utilizar EC2 ImageBuilder 
+para validar las imágenes con las pruebas que ofrece AWS o con sus propias pruebas. Finalmente, proporciona el control de versiones para la administración de las revisiones.Formación y 
+certificación de AWSMódulo 4: Incorporación de una capa informática© 2021 Amazon Web Services, Inc. o sus filiales Todos los derechos reservados.31
+
+Para poder lanzar una instancia, debe seleccionar el tipo de instancia que quiere usar. Un tipo de instancia EC2define una configuración de características de rendimiento de CPU, memoria, almacenamiento y red. 
+Con esta configuración se obtiene un nivel de rendimiento informático dado. El tipo de instancia que elija dependerá de los requisitos de rendimiento y costo de la carga de trabajo.Los nombres de los tipos de instancia siguen 
+una convención estándar. Un nombre de tipo de instancia consta de varias partes que describen las diferentes características del tipo de instancia. Por ejemplo, en el nombre del tipo de instancia m5d.xlarge, mes el nombre de la familia.
+Le sigue un número, que es5 en este caso. Representa el número de generaciónde ese tipo. Por lo tanto, una instancia m5es la quinta generación de la familia m. En general, las instancias con un número de generación más 
+alto son más potentes y ofrecen un mejor valor respecto del precio que las instancias con un número de generación más bajo.Después del número de generación, encontrará una pieza opcional que indica las capacidades adicionales 
+del tipo de instancia. En el ejemplo, la den el nombre indica que el tipo de instancia utiliza una unidad de estado sólido (SSD) para el volumen raíz de EBS en lugar de una unidad de disco duro (HDD) estándar.Formación y certificación
+ de AWSMódulo 4: Incorporación de una capa informática© 2021 Amazon Web Services, Inc. o sus filiales Todos los derechos reservados.36
+La siguiente parte del nombre, que sigue al punto (.) divisor, representa el tamañode la instancia. El tamaño del tipo de instancia define la especificación del rendimiento de una instancia en las categorías del rendimiento de la CPU, 
+la memoria, el almacenamiento y la red. En el ejemplo, xlargeindica que es una instancia extragrande. Para obtener la lista más reciente de los tipos de instancias de Amazon EC2, consulte la documentación de Tipos de instancia de 
+Amazon EC2.
+
+Dada la combinación de categorías de tipos de instancias, capacidades y opciones asociadas a un tipo de instancia, no es de extrañar que haya bastantes. En marzo de 2020, contamos más de 270tipos de instancias disponibles. 
+Esta amplia selección refleja la amplia y profunda riqueza de las ofertas de informática en la nube de AWS.La gran cantidad de tipos de instancias hace que sea difícil responder a la pregunta:¿Cómo se selecciona el tipo de instancia 
+adecuado para su carga de trabajo?Lo que se busca es elegir un tipo de instancia que proporcione el nivel de rendimientoque necesita la aplicación y, al mismo tiempo, garantice la utilización eficiente de los recursos de la instancia 
+para minimizar el costo.Si va a crear una instancia nueva, utilice la página InstanceTypes(Tipos de instancias) de la consola de Amazon EC2 para buscar y comparar las opciones. En esta página se muestran todos los tipos de instancias 
+disponibles en una región y se ofrecen capacidades de búsqueda y filtrado basadas en los valores de los atributos. Como recomendación, cuando elija un tipo de instancia en una familia, seleccione el tipo de instancia de última 
+generación, ya que normalmente tendrá una mejor relación precio-rendimiento. 
+
+Si ya tiene una instancia en ejecución, puede utilizar el servicio de AWS Compute Optimizerpara obtener recomendaciones sobre cómo optimizar el tipo de instancia. Este servicio puede analizar el comportamiento del tiempo de 
+ejecución de la instancia y hacer recomendaciones sobre cómo optimizarlo. Luego, puede evaluar las recomendaciones y modificar la instancia en consecuencia.
+
+AWS Compute Optimizeres un servicio que analiza las métricas de configuración y utilización de las instancias EC2 y los grupos de Auto Scaling. Realiza recomendaciones de optimización para reducir el costo y mejorar el 
+rendimiento de sus cargas de trabajo. Puede utilizar estas recomendaciones para decidir si desea cambiar a un nuevo tipo de instancia.Compute Optimizerutiliza Amazon Machine Learning(Amazon ML) para analizar las cargas de trabajo. 
+Actualmente, realiza recomendaciones sobre el tamaño y el tipo de instancia EC2 para las familias de instancias M, C, R, T y X. Cuando se activa, Compute Optimizeranaliza los recursos informáticos de AWS en ejecución y comienza a 
+ofrecer recomendaciones.Compute Optimizerclasifica las conclusiones de las instancias EC2 como Under-provisioned(Subaprovisionadas), Over-provisioned(Sobreaprovisionadas), Optimized(Optimizadas)o None(Ninguna). Puede que se clasifiquen 
+como None(Ninguna)si hace menos de 12horas que activó Compute Optimizer, cuando la instancia lleva ejecutándose menos de 30horas o cuando el tipo de instancia no es compatible con Compute Optimizer
+
+
+Cuando se lanza una nueva instancia EC2, el comportamiento predeterminado de Amazon EC2 consiste en minimizar los errores correlacionados mediante la distribución de las nuevas instancias por el hardware subyacente. 
+Puede usar grupos de ubicaciónpara influir en la ubicación de un grupo de instancias interdependientescon el fin de satisfacer las necesidades de la carga de trabajo.Dependiendo del tipo de carga de trabajo, 
+puede crear un grupo de ubicación con una de las siguientes estrategias de ubicación:•Clúster:agrupa las instancias unas cerca de otras dentro de una zona de disponibilidad. Esta estrategia permite que las cargas de trabajo 
+logren un rendimiento de la red de baja latencia.•Partición:distribuye las instancias entre las particiones lógicas de modo que los grupos de instancias de una partición no compartan el hardware subyacente con los grupos de 
+instancias de las demás particiones.•Distribuida:coloca estrictamente un pequeño grupo de instancias en distintos equipos de hardware subyacentes para reducir los errores correlacionados.Formación y certificación de AWSMódulo 4: 
+Incorporación de una capa informática© 2021 Amazon Web Services, Inc. o sus filiales Todos los derechos reservados.89
+
+Los grupos de ubicación de partición ayudan a reducir la probabilidad de errores 
+de hardware correlacionados para su aplicación. Cuando se utilizan grupos de ubicación 
+de partición, Amazon EC2 divide cada grupo en segmentos lógicos denominados particiones. Amazon EC2 garantiza que cada partición de un grupo de ubicación tenga su propio conjunto de bastidores. 
+Cada bastidor tiene su propia red y fuente de alimentación. No hay dosparticiones dentro de un grupo de ubicación que compartan los mismos bastidores, lo que le permite aislar el impacto de los errores de 
+hardware en la aplicación.Un grupo de ubicación de particiones puede tener particiones en varias zonas de disponibilidad en la misma región. Un grupo de ubicación de particiones puede tener un máximo de sieteparticiones 
+por zona de disponibilidad.Además, a través de estos grupos se obtiene visibilidad sobre las particiones y se permite que las aplicaciones compatibles con topologías utilicen esta información para tomar decisiones de replicación 
+de datos inteligentes, lo que puede incrementar los niveles de disponibilidad y durabilidad. Como resultado, normalmente se utilizan para implementar grandes cargas de trabajo distribuidas y replicadas, como Apache Hadoop, 
+Apache HBasey Apache Cassandra.Formación y certificación de AWSMódulo 4: Incorporación de una capa informática© 2021 Amazon Web Services, Inc. o sus filiales Todos los derechos reservados.91
