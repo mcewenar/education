@@ -1,0 +1,103 @@
+USAR NANOOO!!!
+nano [file]
+
+Basic scripting/commands:
+
+1 .Probar de forma online cualquier distro: https://distrosea.com/es/start/ubuntu-24.04-default/
+2. Curso de Linux Online: https://linuxjourney.com/
+
+3. -Ventajas: 1. transparencia en los procesos.
+	  2. mayor rapidez.
+	  3. Todo en Linux.
+   -archivos man: documentación de un comando. Ejemplo: [comando] man
+   -[comando_entender] --help: te da la documentación
+
+   -En Linux todo son archivos.
+    - el punto antes de un archivo (.) = ese archivo está oculto, example: .gitignore, .dockerignore
+   -Archivo en Linux que inicia con d, es un directorio.
+
+4. Comandos:
+
+	ls -l: lista los archivos en una carpeta por bytes.
+	ls -lh: lista pero con mb x archivo.
+	cd: cambio de directorio.
+	cd ..: devuelve una carpeta atrás.
+	cd: carpeta raíz.
+	pwd: mostrar la ubicación.
+	mkdir: crear directorio.
+	rm: borrar archivos.
+	rmdir: borra el directorio.
+	cp [origin] [destination]: copy y pega.
+	mv [origin] [destination]: mover y renombrar.
+	exit: salir del bash.
+	touch: crea archivos vaciós.
+	cat: escribe archivo, muestra o concatena archivos.
+	cat [nombre archivo]: ver archivo.
+	echo: mostrar información en el bash o mostrar cadenas de texto según lo que le ingreses como parámetro. IMPRIME, POR ASÍ DECIRLO VARIABLES DE ENTORNO.
+	ECHO $PATH: muestra variables de entorno.
+	grep: The grep command is a powerful utility in Unix/Linux used for searching and manipulating text patterns within files. It stands for "Global Regular Expression Print" and is widely 		used by programmers, system administrators, and users for its efficiency and versatility in handling text data.
+	find: buscar archivos en rutas específicas. Ejemplo: find $PWD -name "*.txt" | grep -r "Berlin".
+	sed: edit text command. The SED (Stream Editor) command is one of the most powerful tools used during text processing in Linux/Unix systems. The SED command is generally used to perform 		tasks such as search and replace, text manipulation, and stream editing.
+	awk: Awk is a scripting language used for manipulating data and generating reports. The awk command programming language requires no compiling and allows the user to use variables, numeric 		functions, string functions, and logical operators.
+	tar: comprimir archivos en Linux.
+	tar -cf [file_comprimed] [normal_file]
+	sudo scp -i workshop-cli-linux.pem david.mcewen.tar ubuntu@ec2-107-22-116-214.compute-1.amazonaws.com:/home/ubuntu: subir archivo a un servidor en AWS con EC2.
+	chmod: change permissions Manage permisión about files or folders. Ej: chmod 400
+	
+	
+5. Gestores de paquetes:
+	-Ejemplo de gestor de paquetes -> Ubuntu: apt.
+	
+	Estructura: sudo apt [accion] [nombre_archivo] (sudo escalar permisos o privilegios)
+	sudo apt search [palabra_clave]: buscar si un programa se encuentra en el sistema.
+
+6. EDITORES DE CÓDIGO EN LINUX:
+	nano: editor de texto por defecto en la mayoría de distros de Linux. Lee archivos planos. No pdf, word.
+	vi: otro editor de código. Entenderlo es fundamental.
+		:q
+		:wq
+		:wq!
+	neovim: otro MÁS INTUITIVO Y MÁS RECIENTE. 
+	vim: 
+
+7. Variables de entorno:
+
+	$NAME_ENVIRONMENT_VARIABLE
+	
+	
+8. Descarga archivos:
+	wget: descarga archivos.
+	curl --help: prueba apis y descarga. -X: para hacer request.
+	curl -X [tipo_peticion] -d {title:'foo', body:'bar',userId:1} [destination]
+
+9. Ver procesos:
+	ps: ver procesos.
+	htop: ver administrador de procesos.
+		kill: matar procesos.
+
+
+PARTE 2:
+Linux allows us do commands using pipe functions, similar to functional programming.
+
+
+10. Redes:
+
+	ip: to see ip.
+	ip link: ver ip.
+
+systemctl: gestor de servicios en Ubuntu.
+Docker consta de un socket y un servicio. Ambas tienen que estar activo.
+
+	sudo systemctl status docker.service: ver el estado del servicio en Docker.
+	sudo systemctl enable/disable docker: correr/apagar docker ne Linux recién se encienda.
+	
+	sudo docker exec -it postgres bash: ejecutar dentro del contenedor docker.
+
+11. SSH:
+	man SSH: 
+	SSH: Conectarse de forma remota a una línea de comandos remoto de un servidor. Sirve mucho para usar servidores AWS en EC2. Ipv4/Ipv6.
+	Ejemplo: conectarse a una instancia EC2 AWS: ssh -i "workshop-cli-Linux.pem" ubuntu@ec2-44-203-203-218.compute.1.amazonaws.com
+	SCP: 
+
+
+	
